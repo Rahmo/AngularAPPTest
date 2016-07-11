@@ -9,9 +9,11 @@
         {{RandName}} {{start}}
         <ul>
             <li ng-repeat="fruitType in fruites">
-                <a href="#" ng-clic="setCurrentCatagory(fruitType)"> {{fruitType.Type}}   </a>
+                <a href="#" ng-click="setCurrentCatagory(fruitType)"   > {{fruitType.Type}}   </a>
             </li>
         </ul>
+        
+        {{currnetCatagory}}
         <P ng-repeat="fruit in fruitsList | filter:{Group:currnetCatagory.Type}"> {{ fruit.name}}</P>
     </div>
 </body>
