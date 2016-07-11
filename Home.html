@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="Rahmsy" lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<body>
+    <div ng-controller="RahmsyCtrl" ng-init="RandName='Rahmo'">
+        <p>Name : <input type="text" ng-model="name"></p>
+        <h1>Hello {{name}}</h1>
+        {{RandName}} {{start}}
+        <ul>
+            <li ng-repeat="fruitType in fruites">
+                <a href="#" ng-clic="setCurrentCatagory(fruitType)"> {{fruitType.Type}}   </a>
+            </li>
+        </ul>
+        <P ng-repeat="fruit in fruitsList | filter:{Group:currnetCatagory.Type}"> {{ fruit.name}}</P>
+    </div>
+</body>
+</html>
+<script src='C:\Projects\AngularjsExcercise\Rahmsy.js'> </script>
