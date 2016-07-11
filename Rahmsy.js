@@ -18,20 +18,17 @@ $scope.fruitsList= [ {'name': 'Orange', 'Group': 'summer"Fruit'  } ,
   
 
      $scope.currnetCatagory = null; 
-     $scope.Day = null; 
-      
-     function SetDay(day) {
-           $scope.Day=day;
-     }
+
     // This is a private function now and can't be used publicly 
     function setCurrentCatagory(catagory){
         $scope.currnetCatagory = catagory ; 
     }
-    $scope.SetDay = SetDay ;
-
+    function alertUser(catagory){
+       alert(catagory.Type);
+    }
      //But once we hook it to the scope it becomes public
       // This we allow us to use it publicly 
-     //$scope.setCurrentCatagory = setCurrentCatagory ;
+     $scope.setCurrentCatagory = setCurrentCatagory ;
 
 });
 /*The example 
